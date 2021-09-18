@@ -21,21 +21,21 @@ public class main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        btn_vhis = (Button)findViewById(R.id.btn_vhis);
+        btn_vhis = findViewById(R.id.btn_vhis);
 
-        btn_ok = (Button)findViewById(R.id.btn_ok);
-        tv_ans = (TextView) findViewById(R.id.tv_ans);
-        Etheight = (EditText)findViewById(R.id.Etheight);
-        Etweight = (EditText)findViewById(R.id.Etweight);
+        btn_ok = findViewById(R.id.btn_ok);
+        tv_ans =  findViewById(R.id.tv_ans);
+        Etheight = findViewById(R.id.Etheight);
+        Etweight = findViewById(R.id.Etweight);
 
         btn_ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                float num2 = Integer.parseInt(Etheight.getText().toString());
-                float num3 = Integer.parseInt(Etweight.getText().toString());
+                float num2 = Float.parseFloat(Etheight.getText().toString());
+                float num3 = Float.parseFloat(Etweight.getText().toString());
                 float s = (num2 * num2);
-                float t = num3/s;
-                tv_ans.setText("ans : "+t);
+                float t = (num3/s)*10000;
+                tv_ans.setText("Answer is"+t);
             }
         });
 

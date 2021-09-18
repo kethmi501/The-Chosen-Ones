@@ -35,8 +35,8 @@
 
     <Button
         android:id="@+id/btn_ok"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="93dp"
+        android:layout_height="48dp"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
         android:layout_marginTop="32dp"
@@ -52,6 +52,10 @@
         android:id="@+id/Etheight"
         android:layout_width="201dp"
         android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:ems="10"
         android:inputType="number"
         android:textSize="14sp"
@@ -62,30 +66,34 @@
 
     <EditText
         android:id="@+id/Etweight"
-        android:layout_width="194dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
+        android:layout_width="198dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:ems="10"
         android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_weight"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.642"
+        app:layout_constraintHorizontal_bias="0.752"
         app:layout_constraintStart_toEndOf="@+id/tv_weight" />
 
     <TextView
         android:id="@+id/tv_ans"
-        android:layout_width="69dp"
-        android:layout_height="31dp"
+        android:layout_width="231dp"
+        android:layout_height="41dp"
         android:layout_marginStart="116dp"
         android:layout_marginLeft="116dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:onClick="sum"
         android:text="@string/tv_ans"
         android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn_ok"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.013"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btn_ok" />
 
     <ImageView
