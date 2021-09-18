@@ -4,20 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:onClick="sum"
     tools:context=".main">
-
-    <TextView
-        android:id="@+id/tv_age"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="40dp"
-        android:text="@string/tv_age"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
         android:id="@+id/tv_height"
@@ -25,12 +13,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginLeft="48dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:text="@string/tv_height"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_age" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
         android:id="@+id/tv_weight"
@@ -52,6 +40,7 @@
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
         android:layout_marginTop="32dp"
+        android:onClick="sum"
         android:text="@string/btn_ok"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -60,19 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_weight" />
 
     <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="204dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="number"
-        android:textSize="14sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tv_age"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
-        app:layout_constraintStart_toEndOf="@+id/tv_age" />
-
-    <EditText
-        android:id="@+id/editTextNumber2"
+        android:id="@+id/Etheight"
         android:layout_width="201dp"
         android:layout_height="46dp"
         android:ems="10"
@@ -84,7 +61,7 @@
         app:layout_constraintStart_toEndOf="@+id/tv_height" />
 
     <EditText
-        android:id="@+id/editTextNumber3"
+        android:id="@+id/Etweight"
         android:layout_width="194dp"
         android:layout_height="51dp"
         android:layout_marginStart="40dp"
@@ -103,6 +80,7 @@
         android:layout_height="31dp"
         android:layout_marginStart="116dp"
         android:layout_marginLeft="116dp"
+        android:onClick="sum"
         android:text="@string/tv_ans"
         android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn_ok"
