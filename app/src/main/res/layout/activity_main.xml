@@ -15,7 +15,7 @@
         android:layout_marginTop="44dp"
         android:onClick="history"
         android:text="@string/btn_his"
-        app:backgroundTint="#4CAF50"
+        app:backgroundTint="#56A3B6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_bmi" />
 
@@ -58,7 +58,7 @@
         android:layout_marginTop="4dp"
         android:onClick="water"
         android:text="@string/btn_water"
-        app:backgroundTint="#FF9800"
+        app:backgroundTint="#56A3B6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toEndOf="@+id/btn_bmi"
@@ -73,6 +73,7 @@
         android:layout_marginTop="44dp"
         android:onClick="OnClick2"
         android:text="@string/btn_info"
+        app:backgroundTint="#56A3B6"
         app:layout_constraintStart_toEndOf="@+id/btn_his"
         app:layout_constraintTop_toBottomOf="@+id/btn_water" />
 
