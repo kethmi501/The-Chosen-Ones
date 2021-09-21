@@ -10,11 +10,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class main extends AppCompatActivity {
+    //initialize
     private Button btn_vhis;
     private Button btn_ok;
     private TextView tv_ans;
     private EditText Etheight;
     private EditText Etweight;
+
+
 
 
     @Override
