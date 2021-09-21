@@ -8,9 +8,10 @@ import android.view.View;
 import android.widget.Button;
 
 public class main7 extends AppCompatActivity {
-
+    //initialize buttons
     Button btn_e_b;
     Button btn_e_u;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
