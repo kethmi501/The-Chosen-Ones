@@ -8,14 +8,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.healthopedia.database.DBhelper;
 
 public class main extends AppCompatActivity {
     //initialize
-    private Button btn_vhis;
-    private Button btn_ok;
-    private TextView tv_ans;
-    private EditText Etheight;
-    private EditText Etweight;
+    Button btn_vhis;
+    Button btn_ok;
+    TextView tv_ans;
+    EditText Etheight;
+    EditText Etweight;
 
 
 
@@ -25,8 +28,8 @@ public class main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         btn_vhis = findViewById(R.id.btn_vhis);
-
         btn_ok = findViewById(R.id.btn_ok);
+
         tv_ans =  findViewById(R.id.tv_ans);
         Etheight = findViewById(R.id.Etheight);
         Etweight = findViewById(R.id.Etweight);
@@ -42,6 +45,19 @@ public class main extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void saveUser(View v){
+        String height = Etheight.getText().toString();
+        String weight = Etweight.getText().toString();
+        String bmi = tv_ans.getText().toString();
+        DBhelper dbhelper = new DBhelper(this);
+
+        if(height.isEmpty() || weight.isEmpty()){
+            Toast.makeText(this, "Enter Values", Toast.LENGTH_SHORT).show();
+        }else{
+            dbhelper.addInfo(height, weight, bmi);
+        }
     }
 
     public void sum(View v)

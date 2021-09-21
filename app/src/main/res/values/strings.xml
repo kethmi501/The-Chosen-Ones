@@ -37,4 +37,5 @@
     <string name="tv_del">"Are you sure you want to delete the records "</string>
     <string name="btn_d_b">back</string>
     <string name="btn_d_d">delete</string>
+    <string name="btn_addBMI">Save</string>
 </resources>
