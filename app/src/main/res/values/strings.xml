@@ -40,4 +40,8 @@
     <string name="btn_addBMI">Save</string>
     <string name="btn_d">delete</string>
     <string name="btn_u">update</string>
+    <string name="Etname">Name</string>
+    <string name="tv_name">Name</string>
+    <string name="Et_name" />
+    <string name="btn_bck">back</string>
 </resources>

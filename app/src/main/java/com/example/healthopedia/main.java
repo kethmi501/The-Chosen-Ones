@@ -20,7 +20,9 @@ public class main extends AppCompatActivity {
     //initialize
     Button btn_vhis;
     Button btn_ok;
+    Button btn_bck;
     TextView tv_ans;
+    EditText Et_name;
     EditText Etheight;
     EditText Etweight;
 
@@ -33,14 +35,17 @@ public class main extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         btn_vhis = findViewById(R.id.btn_vhis);
         btn_ok = findViewById(R.id.btn_ok);
+        btn_bck = findViewById(R.id.btn_bck);
 
         tv_ans =  findViewById(R.id.tv_ans);
+        Et_name =  findViewById(R.id.Et_name);
         Etheight = findViewById(R.id.Etheight);
         Etweight = findViewById(R.id.Etweight);
 
         btn_ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String name = (Et_name.getText().toString());
                 float num2 = Float.parseFloat(Etheight.getText().toString());
                 float num3 = Float.parseFloat(Etweight.getText().toString());
                 float s = (num2 * num2);
@@ -52,6 +57,7 @@ public class main extends AppCompatActivity {
     }
 
     public void saveUser(View v){
+        String name = Et_name.getText().toString();
         String height = Etheight.getText().toString();
         String weight = Etweight.getText().toString();
         String bmi = tv_ans.getText().toString();
@@ -60,7 +66,7 @@ public class main extends AppCompatActivity {
         if(height.isEmpty() || weight.isEmpty()){
             Toast.makeText(this, "Enter Values", Toast.LENGTH_SHORT).show();
         }else{
-            dbhelper.addInfo(height, weight, bmi);
+            dbhelper.addInfo(name,height, weight, bmi);
         }
     }
 
@@ -79,13 +85,13 @@ public class main extends AppCompatActivity {
             builder.setItems(infoArr, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int i) {
-                    String height = infoArr[i].split(":")[0];//this will only display the un not pw
+                    String name = infoArr[i].split(":")[0];//this will only display the un not pw
 
 
-                    Toast.makeText(main.this,height,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(main.this,name,Toast.LENGTH_SHORT).show();
 
-                    Etheight.setText(height);
-                    Etweight.setText("Enter value to update");
+                    Et_name.setText(name);
+
 
                 }
             });
@@ -103,13 +109,19 @@ public class main extends AppCompatActivity {
 
     public void deleteInfo(View v){
         DBhelper dbhelper = new DBhelper(this); //you can have this global in the oncreate method
-        String height = Etheight.getText().toString();
+        String name = Et_name.getText().toString();
 
-        if(height.isEmpty()){
+        if(name.isEmpty()){
             Toast.makeText(main.this,"Select a value",Toast.LENGTH_SHORT).show();
         }else{
-            dbhelper.deleteInfo(height);
-            Toast.makeText(main.this,height+ " User deleted successfully",Toast.LENGTH_SHORT).show();
+            dbhelper.deleteInfo(name);
+            Toast.makeText(main.this,name+ " User deleted successfully",Toast.LENGTH_SHORT).show();
         }
     }
+
+    public void BackToHome(View v){
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
     }
+
+}

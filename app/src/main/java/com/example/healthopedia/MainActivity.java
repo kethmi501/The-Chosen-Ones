@@ -11,7 +11,6 @@ public class MainActivity extends AppCompatActivity {
 
     Button btn_bmi;
     Button btn_water;
-    Button btn_his;
     Button btn_info;
 
     @Override
@@ -21,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
         btn_bmi = findViewById(R.id.btn_bmi);
         btn_water = findViewById(R.id.btn_water);
-        btn_his = findViewById(R.id.btn_his);
         btn_info = findViewById(R.id.btn_info);
 
     }
