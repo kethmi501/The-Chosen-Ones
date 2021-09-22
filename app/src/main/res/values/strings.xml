@@ -38,4 +38,6 @@
     <string name="btn_d_b">back</string>
     <string name="btn_d_d">delete</string>
     <string name="btn_addBMI">Save</string>
+    <string name="btn_d">delete</string>
+    <string name="btn_u">update</string>
 </resources>

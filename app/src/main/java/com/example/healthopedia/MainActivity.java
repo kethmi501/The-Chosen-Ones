@@ -40,8 +40,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void history(View v){
-        Intent intent = new Intent(this,main6.class);
-        startActivity(intent);
-    }
 }

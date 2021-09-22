@@ -1,7 +1,9 @@
 package com.example.healthopedia;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +13,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.healthopedia.database.DBhelper;
+
+import java.util.List;
 
 public class main extends AppCompatActivity {
     //initialize
@@ -64,8 +68,48 @@ public class main extends AppCompatActivity {
     {
 
     }
-    public void OnClick14(View v){
-        Intent intent = new Intent(this,main6.class);
-        startActivity(intent);
+        public void OnClick14(View v){
+            DBhelper dBhelper = new DBhelper(this);
+            List info = dBhelper.readAll();
+            String[] infoArr = (String[])info.toArray( new String[0]);
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("BMI History");
+
+            builder.setItems(infoArr, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int i) {
+                    String height = infoArr[i].split(":")[0];//this will only display the un not pw
+
+
+                    Toast.makeText(main.this,height,Toast.LENGTH_SHORT).show();
+
+                    Etheight.setText(height);
+                    Etweight.setText("Enter value to update");
+
+                }
+            });
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int i) {
+
+                }
+            });
+
+            AlertDialog dialog = builder.create();
+            dialog.show(); //simillar to toast
+
+        }
+
+    public void deleteInfo(View v){
+        DBhelper dbhelper = new DBhelper(this); //you can have this global in the oncreate method
+        String height = Etheight.getText().toString();
+
+        if(height.isEmpty()){
+            Toast.makeText(main.this,"Select a value",Toast.LENGTH_SHORT).show();
+        }else{
+            dbhelper.deleteInfo(height);
+            Toast.makeText(main.this,height+ " User deleted successfully",Toast.LENGTH_SHORT).show();
+        }
     }
-}
+    }
