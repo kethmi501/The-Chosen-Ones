@@ -41,7 +41,7 @@ public class main extends AppCompatActivity {
                 float num3 = Float.parseFloat(Etweight.getText().toString());
                 float s = (num2 * num2);
                 float t = (num3/s)*10000;
-                tv_ans.setText("Answer is"+t);
+                tv_ans.setText("Answer is "+t);
             }
         });
 
