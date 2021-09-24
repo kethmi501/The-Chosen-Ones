@@ -88,7 +88,7 @@ public class main extends AppCompatActivity {
                     String name = infoArr[i].split(":")[0];//this will only display the un not pw
 
 
-                    Toast.makeText(main.this,name,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(main.this,name,Toast.LENGTH_LONG).show();
 
                     Et_name.setText(name);
 
@@ -112,10 +112,10 @@ public class main extends AppCompatActivity {
         String name = Et_name.getText().toString();
 
         if(name.isEmpty()){
-            Toast.makeText(main.this,"Select a value",Toast.LENGTH_SHORT).show();
+            Toast.makeText(main.this,"Select a value",Toast.LENGTH_LONG).show();
         }else{
             dbhelper.deleteInfo(name);
-            Toast.makeText(main.this,name+ " User deleted successfully",Toast.LENGTH_SHORT).show();
+            Toast.makeText(main.this,name+ " deleted successfully",Toast.LENGTH_LONG).show();
         }
     }
 

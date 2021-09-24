@@ -15,79 +15,55 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/info" />
 
+
     <TextView
-        android:id="@+id/tv_ti2"
+        android:id="@+id/tv_1"
         android:layout_width="112dp"
         android:layout_height="50dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         android:text="@string/tv_ti2"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="169dp"
-        android:layout_height="144dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_ti2"
-        app:srcCompat="@drawable/bmicon" />
-
-
-    <TextView
-        android:id="@+id/tv_p2"
-        android:layout_width="146dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/tv_p2"
-        android:textSize="24sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-
-    <TextView
-        android:id="@+id/tv_p3"
-        android:layout_width="308dp"
-        android:layout_height="171dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/tv_p3"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_p2" />
 
     <Button
         android:id="@+id/btn_range"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
         android:onClick="OnClick4"
         android:text="@string/btn_range"
         app:backgroundTint="#56A3B6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_p3" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 
     <Button
         android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginEnd="68dp"
         android:layout_marginRight="68dp"
         android:onClick="OnClick3"
         android:text="@string/btn_back"
         app:backgroundTint="#56A3B6"
         app:layout_constraintEnd_toStartOf="@+id/btn_range"
-        app:layout_constraintTop_toBottomOf="@+id/tv_p3" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="402dp"
+        android:layout_height="349dp"
+        android:layout_marginTop="62dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_1"
+        app:srcCompat="@drawable/whtbmi" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
