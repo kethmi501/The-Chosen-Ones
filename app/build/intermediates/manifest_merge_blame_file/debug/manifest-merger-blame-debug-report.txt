@@ -1,0 +1,62 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.healthopedia"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml
+10
+11    <application
+11-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:5:5-24:19
+12        android:allowBackup="true"
+12-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:6:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.5.0] /Users/kethmi/.gradle/caches/transforms-2/files-2.1/cc5e9dcdc56dc39042f72c501235e83f/core-1.5.0/AndroidManifest.xml:24:18-86
+14        android:debuggable="true"
+15        android:icon="@mipmap/ic_launcher"
+15-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:7:9-43
+16        android:label="@string/app_name"
+16-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:8:9-41
+17        android:roundIcon="@mipmap/ic_launcher_round"
+17-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:9:9-54
+18        android:supportsRtl="true"
+18-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:10:9-35
+19        android:testOnly="true"
+20        android:theme="@style/Theme.Healthopedia" >
+20-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:11:9-50
+21        <activity android:name="com.example.healthopedia.main5" />
+21-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:12:9-43
+21-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:12:19-40
+22        <activity android:name="com.example.healthopedia.main4" />
+22-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:13:9-43
+22-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:13:19-40
+23        <activity android:name="com.example.healthopedia.main3" />
+23-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:14:9-43
+23-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:14:19-40
+24        <activity android:name="com.example.healthopedia.main1" />
+24-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:15:9-43
+24-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:15:19-40
+25        <activity android:name="com.example.healthopedia.main" />
+25-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:16:9-42
+25-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:16:19-39
+26        <activity android:name="com.example.healthopedia.MainActivity" >
+26-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:17:9-23:20
+26-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:17:19-47
+27            <intent-filter>
+27-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:18:13-22:29
+28                <action android:name="android.intent.action.MAIN" />
+28-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:19:17-69
+28-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:19:25-66
+29
+30                <category android:name="android.intent.category.LAUNCHER" />
+30-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:21:17-77
+30-->/Users/kethmi/AndroidStudioProjects/Healthopedia/app/src/main/AndroidManifest.xml:21:27-74
+31            </intent-filter>
+32        </activity>
+33    </application>
+34
+35</manifest>
