@@ -4,142 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity3">
+    tools:context=".main3">
 
-        <EditText
-            android:id="@+id/text_calory2"
-            android:layout_width="118dp"
-            android:layout_height="50dp"
-            android:ems="10"
-            android:inputType="numberDecimal"
-            app:layout_constraintBottom_toBottomOf="@+id/lbl_eCalory2"
-            app:layout_constraintEnd_toEndOf="@+id/lbl_eCalory2"
-            app:layout_constraintTop_toTopOf="@+id/lbl_eCalory2"
-            app:layout_constraintVertical_bias="1.0" />
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="411dp"
+        android:layout_height="66dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/info" />
 
-        <EditText
-            android:id="@+id/lbl_eCalory2"
-            android:layout_width="395dp"
-            android:layout_height="59dp"
-            android:layout_marginTop="36dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="@string/lbl_eCalory"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lbl_noMeals2" />
 
-        <EditText
-            android:id="@+id/text_size3"
-            android:layout_width="81dp"
-            android:layout_height="49dp"
-            android:ems="10"
-            android:inputType="number"
-            app:layout_constraintBottom_toBottomOf="@+id/lbl_noMeals2"
-            app:layout_constraintEnd_toEndOf="@+id/lbl_noMeals2"
-            app:layout_constraintTop_toTopOf="@+id/lbl_noMeals2" />
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="112dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tv_ti2"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-        <EditText
-            android:id="@+id/lbl_noMeals2"
-            android:layout_width="396dp"
-            android:layout_height="52dp"
-            android:layout_marginTop="36dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="@string/lbl_noMeals"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.533"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_name" />
+    <Button
+        android:id="@+id/btn_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:onClick="OnClick4"
+        android:text="@string/btn_range"
+        app:backgroundTint="#56A3B6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 
-        <EditText
-            android:id="@+id/text_name2"
-            android:layout_width="262dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="60dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.666"
-            app:layout_constraintStart_toEndOf="@+id/edit_name"
-            app:layout_constraintTop_toBottomOf="@+id/lbl_navbar2" />
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:onClick="OnClick3"
+        android:text="@string/btn_back"
+        app:backgroundTint="#56A3B6"
+        app:layout_constraintEnd_toStartOf="@+id/btn_range"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 
-        <TextView
-            android:id="@+id/lbl_navbar2"
-            android:layout_width="411dp"
-            android:layout_height="60dp"
-            android:background="#0095B6"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:id="@+id/btn_back"
-            android:layout_width="62dp"
-            android:layout_height="58dp"
-            android:layout_marginBottom="2dp"
-            android:background="#0095B6"
-            android:src="?attr/actionModeCloseDrawable"
-            app:layout_constraintBottom_toBottomOf="@+id/lbl_navbar2"
-            app:layout_constraintStart_toStartOf="@+id/lbl_navbar2"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/lbl_addFood"
-            android:layout_width="225dp"
-            android:layout_height="47dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="20dp"
-            android:text="@string/lbl_addfood"
-            android:textColor="#FDFCFC"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="@+id/lbl_navbar2"
-            app:layout_constraintEnd_toEndOf="@+id/lbl_navbar2"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/btn_back"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.125" />
-
-        <TextView
-            android:id="@+id/edit_name"
-            android:layout_width="117dp"
-            android:layout_height="54dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="72dp"
-            android:text="@string/editdel_name"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lbl_addFood" />
-
-        <Button
-            android:id="@+id/btn_edit"
-            android:layout_width="148dp"
-            android:layout_height="58dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="76dp"
-            android:onClick="updateFood"
-            android:text="@string/btn_edit"
-            android:textColor="#0C0A0A"
-            android:textSize="20sp"
-            app:backgroundTint="#009688"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lbl_eCalory2" />
-
-        <Button
-            android:id="@+id/btn_delete"
-            android:layout_width="134dp"
-            android:layout_height="57dp"
-            android:layout_marginTop="76dp"
-            android:onClick="deleteFood"
-            android:text="@string/btn_delete"
-            android:textColor="#0E0D0D"
-            android:textSize="20sp"
-            app:backgroundTint="#009688"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.471"
-            app:layout_constraintStart_toEndOf="@+id/btn_edit"
-            app:layout_constraintTop_toBottomOf="@+id/lbl_eCalory2" />
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="402dp"
+        android:layout_height="349dp"
+        android:layout_marginTop="62dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_1"
+        app:srcCompat="@drawable/whtbmi" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

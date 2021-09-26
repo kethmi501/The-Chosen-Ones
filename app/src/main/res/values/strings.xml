@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Healthopedia</string>
+    <string name="tv_age">Age</string>
+    <string name="tv_height">Height</string>
+    <string name="tv_weight">Weight</string>
+    <string name="btn_ok">OK</string>
+    <string name="tv_ans" />
+    <string name="btm_bmi">Calculate BMI</string>
+    <string name="btn_water">Water Intake</string>
+    <string name="btn_his">View History</string>
+    <string name="btn_graph">Weight Graph</string>
+    <string name="tv_t1">BMI</string>
+    <string name="tv_p1">BMI Range</string>
+    <string name="tv_ti2">BMI</string>
+    <string name="tv_p2">What is BMI ?</string>
+    <string name="tv_p3">The body mass index is defined as the mass and the height of an individuals.
+    Body mass index (BMI) is a value derived from the mass (weight) and height of a person.
+        The BMI is defined as the body mass divided by the square of the body height, and is expressed in units of kg/m2, resulting from mass in kilograms and height in metres.</string>
+    <string name="btn_vhis">View History</string>
+    <string name="btn_info">Information</string>
+    <string name="btn_range">See Range</string>
+    <string name="btn_back">Back</string>
+    <string name="bt_bck">back</string>
+    <string name="tv_ti3">Your Water Intake</string>
+    <string name="tv_glass">"Take 6 Glasses "</string>
+    <string name="btn_msg">Done</string>
+    <string name="btn_bck_w">back</string>
+    <string name="tv_con">You have successfully completed the daily task !!</string>
+    <string name="bt_s_bck">Go back to home</string>
+    <string name="btn_h_b">back</string>
+    <string name="btn_h_u">update</string>
+    <string name="btn_h_d">delete</string>
+    <string name="tv_h">Record History</string>
+    <string name="tv_edi">Are you sure you want to edit records</string>
+    <string name="btn_e_b">back</string>
+    <string name="btn_e_u">update</string>
+    <string name="tv_del">"Are you sure you want to delete the records "</string>
+    <string name="btn_d_b">back</string>
+    <string name="btn_d_d">delete</string>
+    <string name="btn_addBMI">Save</string>
+    <string name="btn_d">delete</string>
+    <string name="btn_u">update</string>
+    <string name="Etname">Name</string>
+    <string name="tv_name">Name</string>
+    <string name="Et_name" />
+    <string name="btn_bck">back</string>
+    <string name="tv_1">BMI Range</string>
+</resources>
