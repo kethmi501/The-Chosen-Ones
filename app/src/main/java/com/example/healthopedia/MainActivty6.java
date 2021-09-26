@@ -12,5 +12,6 @@ public class MainActivty6 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_activty6);
 
+
     }
 }
