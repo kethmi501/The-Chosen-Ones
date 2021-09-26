@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import com.example.healthopedia.database.DBhelper;
 
 import java.util.List;
@@ -61,7 +62,7 @@ public class main extends AppCompatActivity {
         String height = Etheight.getText().toString();
         String weight = Etweight.getText().toString();
         String bmi = tv_ans.getText().toString();
-        DBhelper dbhelper = new DBhelper(this);
+        DBhelper  dbhelper = new DBhelper(this);
 
         if(height.isEmpty() || weight.isEmpty()){
             Toast.makeText(this, "Enter Values", Toast.LENGTH_SHORT).show();
