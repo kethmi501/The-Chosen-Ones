@@ -6,26 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".main5">
 
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="407dp"
-        android:layout_height="400dp"
-        android:src="@drawable/con"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/tv_con"
         android:layout_width="339dp"
         android:layout_height="51dp"
-        android:layout_marginTop="32dp"
         android:text="@string/tv_con"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <Button
         android:id="@+id/bt_s_bck"
@@ -40,5 +30,14 @@
         app:backgroundTint="#56A3B6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_con" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="411dp"
+        android:layout_height="427dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cong" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
