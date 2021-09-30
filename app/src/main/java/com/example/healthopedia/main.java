@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.service.autofill.RegexValidator;
+import android.service.controls.templates.RangeTemplate;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,12 +15,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.basgeekball.awesomevalidation.AwesomeValidation;
+import com.basgeekball.awesomevalidation.ValidationStyle;
+import com.basgeekball.awesomevalidation.utility.RegexTemplate;
 import com.example.healthopedia.database.DBhelper;
 
 import java.util.List;
 
 public class main extends AppCompatActivity {
-    //initialize
+    //initialize variables
     Button btn_vhis;
     Button btn_ok;
     Button btn_bck;
@@ -27,12 +32,12 @@ public class main extends AppCompatActivity {
     EditText Etheight;
     EditText Etweight;
 
-
-
+    AwesomeValidation awesomeValidation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //assign variables
         setContentView(R.layout.activity_main2);
         btn_vhis = findViewById(R.id.btn_vhis);
         btn_ok = findViewById(R.id.btn_ok);
@@ -55,20 +60,38 @@ public class main extends AppCompatActivity {
             }
         });
 
+        //initialize validation styles
+        awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
+
+        //add validation for name
+        awesomeValidation.addValidation(this,R.id.Et_name,
+                RegexTemplate.NOT_EMPTY,R.string.invalid_name);
+        //add validation for name
+        awesomeValidation.addValidation(this,R.id.Etheight,"[0-9]{3}$",R.string.invalid_height);
+        //add validation for name
+        awesomeValidation.addValidation(this,R.id.Etweight,
+                "[0-9]{2}$",R.string.invalid_weight);
     }
 
     public void saveUser(View v){
-        String name = Et_name.getText().toString();
-        String height = Etheight.getText().toString();
-        String weight = Etweight.getText().toString();
-        String bmi = tv_ans.getText().toString();
-        DBhelper  dbhelper = new DBhelper(this);
 
-        if(height.isEmpty() || weight.isEmpty()){
-            Toast.makeText(this, "Enter Values", Toast.LENGTH_SHORT).show();
+        if(awesomeValidation.validate()){
+            String name = Et_name.getText().toString();
+            String height = Etheight.getText().toString();
+            String weight = Etweight.getText().toString();
+            String bmi = tv_ans.getText().toString();
+            DBhelper  dbhelper = new DBhelper(this);
+
+            if(height.isEmpty() || weight.isEmpty()){
+                Toast.makeText(this, "Enter Values", Toast.LENGTH_SHORT).show();
+            }else{
+                dbhelper.addInfo(name,height, weight, bmi);
+            }
         }else{
-            dbhelper.addInfo(name,height, weight, bmi);
+            Toast.makeText(getApplicationContext(),
+                    "Validation Failed!!!",Toast.LENGTH_SHORT).show();
         }
+
     }
 
     public void sum(View v)
