@@ -45,17 +45,7 @@ public class main extends AppCompatActivity {
         Et_name =  findViewById(R.id.Et_name);
         Etheight = findViewById(R.id.Etheight);
         Etweight = findViewById(R.id.Etweight);
-        btn_ok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String name = (Et_name.getText().toString());
-                float num2 = Float.parseFloat(Etheight.getText().toString());
-                float num3 = Float.parseFloat(Etweight.getText().toString());
-                float s = (num2 * num2);
-                float t = (num3/s)*10000;
-                tv_ans.setText("Answer is "+t);
-            }
-        });
+
         //initialize validation styles
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
 
@@ -70,23 +60,36 @@ public class main extends AppCompatActivity {
     }
 
     public void s(View v) {
+        if(awesomeValidation.validate()){
+            String height = Etheight.getText().toString();
+            String weight = Etweight.getText().toString();
+            String bmi = tv_ans.getText().toString();
+
         String name = (Et_name.getText().toString());
         float num2 = Float.parseFloat(Etheight.getText().toString());
         float num3 = Float.parseFloat(Etweight.getText().toString());
+            DBhelper  dbhelper = new DBhelper(this);
         float s = (num2 * num2);
         float t = (num3/s)*10000;
         tv_ans.setText("Answer is "+t);
+        }else{
+            Toast.makeText(getApplicationContext(),
+                    "Validation Failed!!!",Toast.LENGTH_SHORT).show();
+        }
     }
 
 
     public void saveUser(View v){
 
         if(awesomeValidation.validate()){
+            Toast.makeText(getApplicationContext(),
+                    "User Saved Successfully!!!",Toast.LENGTH_SHORT).show();
             String name = Et_name.getText().toString();
             String height = Etheight.getText().toString();
             String weight = Etweight.getText().toString();
             String bmi = tv_ans.getText().toString();
             DBhelper  dbhelper = new DBhelper(this);
+
 
             if(height.isEmpty() || weight.isEmpty()){
                 Toast.makeText(this, "Enter Values", Toast.LENGTH_SHORT).show();
@@ -97,11 +100,6 @@ public class main extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),
                     "Validation Failed!!!",Toast.LENGTH_SHORT).show();
         }
-
-    }
-
-    public void sum(View v)
-    {
 
     }
 
