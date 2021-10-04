@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.service.autofill.RegexValidator;
-import android.service.controls.templates.RangeTemplate;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -47,7 +45,6 @@ public class main extends AppCompatActivity {
         Et_name =  findViewById(R.id.Et_name);
         Etheight = findViewById(R.id.Etheight);
         Etweight = findViewById(R.id.Etweight);
-
         btn_ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,7 +56,6 @@ public class main extends AppCompatActivity {
                 tv_ans.setText("Answer is "+t);
             }
         });
-
         //initialize validation styles
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
 
@@ -72,6 +68,16 @@ public class main extends AppCompatActivity {
         awesomeValidation.addValidation(this,R.id.Etweight,
                 "[0-9]{2}$",R.string.invalid_weight);
     }
+
+    public void s(View v) {
+        String name = (Et_name.getText().toString());
+        float num2 = Float.parseFloat(Etheight.getText().toString());
+        float num3 = Float.parseFloat(Etweight.getText().toString());
+        float s = (num2 * num2);
+        float t = (num3/s)*10000;
+        tv_ans.setText("Answer is "+t);
+    }
+
 
     public void saveUser(View v){
 
@@ -98,6 +104,7 @@ public class main extends AppCompatActivity {
     {
 
     }
+
         public void OnClick14(View v){
             DBhelper dBhelper = new DBhelper(this);
             List info = dBhelper.readAll();
@@ -147,5 +154,5 @@ public class main extends AppCompatActivity {
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
-
+    
 }
