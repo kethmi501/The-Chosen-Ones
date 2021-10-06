@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lbl_navbar"
+        android:layout_width="411dp"
+        android:layout_height="60dp"
+        android:background="#0095B6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_calculator"
+        android:layout_width="285dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/lbl_calculator"
+        android:textColor="#FDFCFC"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_navbar"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_navbar"
+        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintStart_toStartOf="@+id/lbl_navbar"
+        app:layout_constraintTop_toTopOf="@+id/lbl_navbar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lbl_age"
+        android:layout_width="169dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/text_age"
+        android:textColor="#070606"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_navbar" />
+
+    <TextView
+        android:id="@+id/lbl_activityLevel"
+        android:layout_width="169dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/text_activityLevel"
+        android:textColor="#070606"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_gender" />
+
+    <TextView
+        android:id="@+id/lbl_gender"
+        android:layout_width="169dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/text_gender"
+        android:textColor="#070606"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lb_lweight" />
+
+    <TextView
+        android:id="@+id/lb_lweight"
+        android:layout_width="169dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/text_weight"
+        android:textColor="#070606"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_height" />
+
+    <TextView
+        android:id="@+id/lbl_height"
+        android:layout_width="169dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/text_height"
+        android:textColor="#070606"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_age" />
+
+    <EditText
+        android:id="@+id/text_gender"
+        android:layout_width="174dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Male/Female"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintStart_toEndOf="@+id/lbl_gender"
+        app:layout_constraintTop_toBottomOf="@+id/text_weight" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="173dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lbl_activityLevel"
+        app:layout_constraintTop_toBottomOf="@+id/text_gender">
+
+        <RadioButton
+            android:id="@+id/rdb_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rdb_light"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rdb_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rdb_mode"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rdb_high"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rdb_high"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:onClick="CalculateAndSendAnswer"
+        android:text="@string/btn_calculate"
+        android:textColor="#070707"
+        android:textSize="24sp"
+        app:backgroundTint="#009688"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_activityLevel"
+        app:layout_constraintVertical_bias="0.671" />
+
+    <EditText
+        android:id="@+id/text_age"
+        android:layout_width="174dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toEndOf="@+id/lbl_age"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_navbar" />
+
+    <EditText
+        android:id="@+id/text_height"
+        android:layout_width="173dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="34dp"
+        android:ems="10"
+        android:hint="Height in cm"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.268"
+        app:layout_constraintStart_toEndOf="@+id/lbl_height"
+        app:layout_constraintTop_toBottomOf="@+id/text_age" />
+
+    <EditText
+        android:id="@+id/text_weight"
+        android:layout_width="173dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Weight in kg"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintStart_toEndOf="@+id/lb_lweight"
+        app:layout_constraintTop_toBottomOf="@+id/text_height" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Healthopedia</string>
+    <string name="lbl_calculator">Calorie Calculator</string>
+    <string name="text_age">Age</string>
+    <string name="text_height">Height</string>
+    <string name="text_weight">Weight</string>
+    <string name="text_gender">Gender</string>
+    <string name="text_activityLevel">Activity Level</string>
+    <string name="rdb_light">Light</string>
+    <string name="rdb_mode">Moderate</string>
+    <string name="rdb_high">High</string>
+    <string name="btn_calculate">calculate</string>
+    <string name="lbl_FoodDiary">Food Diary</string>
+    <string name="lbl_CaloRemain">Goal Calorie</string>
+    <string name="lbl_goal">Goal</string>
+    <string name="lbl_plus">-</string>
+    <string name="lbl_Food">Food</string>
+    <string name="lbl_equal">=</string>
+    <string name="lbl_Remain">Remain</string>
+    <string name="btn_add">Add Food</string>
+    <string name="lbl_addFood">Add Food</string>
+    <string name="lbl_name">Food name</string>
+    <string name="lbl_size">Meal Size</string>
+    <string name="lbl_type">Meal Type</string>
+    <string name="lbl_date">Date</string>
+    <string name="btn_save">Save</string>
+    <string name="lbl_viewFood">View Food</string>
+    <string name="btn_view">View Food</string>
+    <string name="btn_edit">update</string>
+    <string name="btn_delete">Delete</string>
+</resources>

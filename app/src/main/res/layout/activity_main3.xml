@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+    <TextView
+        android:id="@+id/lbl_type"
+        android:layout_width="123dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/lbl_type"
+        android:textColor="#090707"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_size" />
+
+    <TextView
+        android:id="@+id/lbl_date"
+        android:layout_width="123dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/lbl_date"
+        android:textColor="#090707"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_type" />
+
+    <TextView
+        android:id="@+id/lbl_size"
+        android:layout_width="123dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/lbl_size"
+        android:textColor="#090707"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_name" />
+
+    <TextView
+        android:id="@+id/lbl_navbar3"
+        android:layout_width="411dp"
+        android:layout_height="60dp"
+        android:background="#0095B6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_addFood"
+        android:layout_width="178dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:text="@string/lbl_addFood"
+        android:textColor="#FDFCFC"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_navbar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="55dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="3dp"
+        android:background="#0095B6"
+        android:onClick="BacktoPage"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_navbar3"
+        app:layout_constraintStart_toStartOf="@+id/lbl_navbar3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <TextView
+        android:id="@+id/lbl_name"
+        android:layout_width="123dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/lbl_name"
+        android:textColor="#090707"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_navbar3" />
+
+    <EditText
+        android:id="@+id/text_name"
+        android:layout_width="194dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="76dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintStart_toEndOf="@+id/lbl_name"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_navbar3" />
+
+    <EditText
+        android:id="@+id/text_type"
+        android:layout_width="197dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toEndOf="@+id/lbl_type"
+        app:layout_constraintTop_toBottomOf="@+id/text_size" />
+
+    <EditText
+        android:id="@+id/text_size"
+        android:layout_width="193dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="34dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/lbl_size"
+        app:layout_constraintTop_toBottomOf="@+id/text_name" />
+
+    <EditText
+        android:id="@+id/text_date"
+        android:layout_width="196dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="34dp"
+        android:ems="10"
+        android:inputType="date"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintStart_toEndOf="@+id/lbl_date"
+        app:layout_constraintTop_toBottomOf="@+id/text_type" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="203dp"
+        android:layout_height="59dp"
+        android:onClick="saveFood"
+        android:text="@string/btn_save"
+        android:textColor="#0B0909"
+        android:textSize="24sp"
+        app:backgroundTint="#009688"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_date"
+        app:layout_constraintVertical_bias="0.308" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
